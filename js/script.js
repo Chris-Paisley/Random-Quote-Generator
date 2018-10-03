@@ -4,17 +4,14 @@
 
 let quotes = [
   {
-    quote: “You don’t love because:
-      you love despite; not for the virtues, but despite the faults.”,
+    quote: "You don’t love because: you love despite; not for the virtues, but despite the faults.",
     source: "William Faulkner",
     citation: "Mississippi",
     year: 1954,
     tags: ["love", "essay"]
   },
   {
-    quote:  “Love is the voice under all silences, the hope which has no opposite
-      in fear; the strength so strong mere force is feebleness:
-      the truth more first than sun, more last than star.”,
+    quote:  "Love is the voice under all silences, the hope which has no opposite in fear; the strength so strong mere force is feebleness the truth more first than sun, more last than star.",
     source:  "e.e. cummings",
     citation: "being to timelessness as it’s to time",
     year: 1958,
@@ -22,26 +19,25 @@ let quotes = [
   },
   {
     quote: "I have not failed. I have just found 10,000 things that do not work.",
-    source: "Thomas Edison"
+    source: "Thomas Edison",
     tags: "inspirational"
   },
   {
-    quote:
-    source:
-    citation:
-    year:
+    quote:  "Don't become a mere recorder of facts, but try to penetrate the mystery of their origin.",
+    source: "Ivan Pavlov",
+    tags: "psychology"
   },
   {
-    quote:
-    source:
-    citation:
-    year:
+    quote: "We must learn to live together as brothers or perish together as fools.",
+    source: "Martin Luther King Jr",
+    tags: "inspirational"
   },
   {
-    quote:
-    source:
-    citation:
-    year:
+    quote: "Love is a smoke and is made with the fume of sighs.",
+    source: "William Shakespeare",
+    citation: "Romeo & Juliet – Act 1, Scene 1",
+    year: 1597,
+    tags: ["love", "play"]
   },
 ];
 
