@@ -46,37 +46,41 @@ let quotes = [
 
 //Gets random quote from quotes array
 function getRandomQuote (array){
-  let numb = Math.floor(Math.random() * array.length);
-  return array[numb];
+  let numb = quotes[Math.floor(Math.random() * quotes.length)];
+  return numb;
 
 }
 
+//testing to see if this works
+console.log(getRandomQuote());
 // Create the printQuote funtion and name it printQuote
 
 //prints a random quote to the page
 function printQuote (){
-  let randNumb = getRandomQuote(array);
+  let randNumb = getRandomQuote();
   let quotePrinted = '';
 
-  quotePrinted += '<p class="quote">' + quotes[randNumb].name + '</p>';
-  quotePrinted += '<p class="source">' + quotes[randNumb].source;
+  quotePrinted += '<p class="quote">' + randNumb.quote + '</p>';
+  quotePrinted += '<p class="source">' + randNumb.source;
 
   //only including citation, year and tags if they exist otherwise it ends with they name and source
-  if (quotes[randNumb].citation){
-    quotePrinted += '<span class="citation">' + quotes[randNumb].citation + '</span>';
-  }else if (quotes[randNumb].year){
-    quotePrinted += '<span class="year">' + quotes[randNumb].year + '</span>';
-  } else if (quotes[randNumb].tags) {
-    quotePrinted += '<span class="tags">' + quotes[randNumb].tags + '</span>';
+  if (randNumb.citation){
+    quotePrinted += '<span class="citation">' + randNumb.citation + '</span>';
+  }else if (randNumb.year){
+    quotePrinted += '<span class="year">' + randNumb.year + '</span>';
+  } else if (randNumb.tags) {
+    quotePrinted += '<span class="tags">' + randNumb.tags + '</span>';
   } else {
     quotePrinted += '</p>'
   }
+  document.getElementById('quote-box').innerHTML = quotePrinted;
 
-  document.getElementById('quote-box').innerHTML = stringOfQuoteProperties;
+
 
 }
 
-
+//print quote to the page
+printQuote();
 // This event listener will respond to "Show another quote" button clicks
 // when user clicks anywhere on the button, the "printQuote" function is called
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
