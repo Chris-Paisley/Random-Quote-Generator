@@ -39,10 +39,8 @@ let quotes = [
     year: "1597",
     tags: "love"
   },
-];
+]; //End of quotes array
 
-
-// Create the getRandomQuuote function and name it getRandomQuote
 
 //Gets random quote from quotes array
 function getRandomQuote (array){
@@ -89,16 +87,20 @@ function rgbNumb (){
 }
 
 //call it for red, green,and blue
+//form string into 'rgb(' + number + ',' + number + ',' + number + ')'
 function randColor(){
   let color = "rgb(";
   color += rgbNumb() + ',';
   color += rgbNumb() + ',';
   color += rgbNumb() + ')';
+  //sets the rgb to the bodys background
+  document.body.style.backgroundColor = color;
   return color;
 }
-//form string into 'rgb(' + number + ',' + number + ',' + number + ')'
+
 //add it to the brackground to change on click with the quotes
 console.log(randColor());
+
 // This event listener will respond to "Show another quote" button clicks
 // when user clicks anywhere on the button, the "printQuote" function is called
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
