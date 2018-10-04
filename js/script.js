@@ -98,9 +98,12 @@ function randColor(){
   return color;
 }
 
-//add it to the brackground to change on click with the quotes
-console.log(randColor());
+//calling randColor function and printQuote function so when the user clicks the color and quote change
+function clickChange (){
+  randColor();
+  printQuote();
+}
 
 // This event listener will respond to "Show another quote" button clicks
-// when user clicks anywhere on the button, the "printQuote" function is called
-document.getElementById('loadQuote').addEventListener("click", printQuote, false);
+// when user clicks anywhere on the button, the "clickChange" function is called
+document.getElementById('loadQuote').addEventListener("click", clickChange, false);
