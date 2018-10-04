@@ -1,7 +1,4 @@
-// FSJS - Random Quote Generator
-
-// Create the array of quote objects and name it quotes
-
+//An array of objects called quotes
 let quotes = [
   {
     quote: "You don’t love because: you love despite; not for the virtues, but despite the faults.",
@@ -51,6 +48,7 @@ function getRandomQuote (array){
 //prints a random quote to the page
 function printQuote (){
   let randNumb = getRandomQuote();
+
   //Empty string to build the new string of quote, source, year and citation
   let quotePrinted = '';
 
@@ -98,12 +96,16 @@ function randColor(){
   return color;
 }
 
+randColor();
+
+//changes quote and color automaticly after 20 seconds
+setInterval(clickChange, 20000);
+
 //calling randColor function and printQuote function so when the user clicks the color and quote change
 function clickChange (){
   randColor();
   printQuote();
 }
 
-// This event listener will respond to "Show another quote" button clicks
-// when user clicks anywhere on the button, the "clickChange" function is called
+//responds to show another quote button with changing quote and background color
 document.getElementById('loadQuote').addEventListener("click", clickChange, false);
