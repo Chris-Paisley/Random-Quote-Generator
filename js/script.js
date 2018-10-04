@@ -83,7 +83,22 @@ function printQuote (){
 //print quote to the page
 printQuote();
 
+//get random number between 0 and 255
+function rgbNumb (){
+  return Math.floor(Math.random() * 256);
+}
 
+//call it for red, green,and blue
+function randColor(){
+  let color = "rgb(";
+  color += rgbNumb() + ',';
+  color += rgbNumb() + ',';
+  color += rgbNumb() + ')';
+  return color;
+}
+//form string into 'rgb(' + number + ',' + number + ',' + number + ')'
+//add it to the brackground to change on click with the quotes
+console.log(randColor());
 // This event listener will respond to "Show another quote" button clicks
 // when user clicks anywhere on the button, the "printQuote" function is called
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
